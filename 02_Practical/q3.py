@@ -16,6 +16,6 @@ def question_3():
   else:
     tax_rate = 0.25
 
-  # Calculate total tax in a single so it is easier to refactor code
+  # Calculate total tax once only so it is easier to refactor code
   total_tax = yearly_income * tax_rate
   print(f'Total tax: RM{total_tax:.2f}')
