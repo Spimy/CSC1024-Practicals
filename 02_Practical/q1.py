@@ -13,9 +13,10 @@ def question_1():
   num_old = int(input_num('Enter number of old videos to rent: '))
   num_days_rented_old = int(input_num('Enter number of days to rent videos: '))
 
+  # Calculate total cost
   cost_new_vid = num_new * num_days_rented_new * NEW_VID_PRICE
   cost_old_vid = num_old * num_days_rented_old * OLD_VID_PRICE
-
   total_cost = cost_new_vid + cost_old_vid
+  
   print(f'Total cost of video rental: ${total_cost}')
 
