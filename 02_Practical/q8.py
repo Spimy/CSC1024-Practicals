@@ -2,7 +2,7 @@ from utils import input_num
 
 
 def input_operator(display_text):
-    OPERATOR_LIST = ['+', '-', '*', '/']
+    OPERATOR_LIST = ['+', '-', '*', '/', '^']
     operator = ''
 
     while operator not in OPERATOR_LIST:
@@ -27,3 +27,4 @@ def question_8():
         case '*': print(f'{expression} = {num_x * num_y}')
         # Use ternary operator to output the appropriate string
         case '/': print(f'{expression} = {num_x / num_y}') if num_y != 0 else print(f'{expression} cannot devide by zero')
+        case '^': print(f'{expression} = {num_x ** num_y}')
