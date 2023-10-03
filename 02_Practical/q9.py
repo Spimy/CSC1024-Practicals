@@ -19,9 +19,10 @@ from utils import input_num
 
 def question_9():
     # Constants
+    BREAKPOINT = 4000
     PERCENTAGE_OPT_2 = 0.125
-    PERCENTAGE_OPT_3_L4000 = 0.10  # Less than 4000
-    PERCENTAGE_OPT_3_M4000 = 0.14  # More than 4000
+    PERCENTAGE_OPT_3_LBREAKPOINT = 0.10  # Less than BREAKPOINT
+    PERCENTAGE_OPT_3_MBREAKPOINT = 0.14  # More than BREAKPOINT
 
     # Prompt user the enter the necessary information
     net_price = input_num('Enter net price: ')
@@ -34,13 +35,14 @@ def question_9():
     total_opt_2 = (net_price * PERCENTAGE_OPT_2) * estimated_sales
 
     # Option 3
-    if estimated_sales <= 4000:
-        total_opt_3 = (net_price * PERCENTAGE_OPT_3_L4000) * estimated_sales
+    if estimated_sales <= BREAKPOINT:
+        total_opt_3 = (net_price * PERCENTAGE_OPT_3_LBREAKPOINT) * \
+            estimated_sales
     else:
-        remaining_sales = estimated_sales - 4000
+        remaining_sales = estimated_sales - BREAKPOINT
         total_opt_3 = \
-            ((net_price * PERCENTAGE_OPT_3_M4000) * remaining_sales) + \
-            ((net_price * PERCENTAGE_OPT_3_L4000) * 4000)
+            ((net_price * PERCENTAGE_OPT_3_MBREAKPOINT) * remaining_sales) + \
+            ((net_price * PERCENTAGE_OPT_3_LBREAKPOINT) * BREAKPOINT)
 
     # Select best option
     best_option = 1
