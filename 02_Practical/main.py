@@ -8,6 +8,7 @@ from q6 import question_6
 from q7 import question_7
 from q8 import question_8
 from q9 import question_9
+from q10 import question_10
 
 
 def main():
@@ -23,6 +24,7 @@ def main():
         case 7: question_7()
         case 8: question_8()
         case 9: question_9()
+        case 10: question_10()
         case _: main()
 
 
