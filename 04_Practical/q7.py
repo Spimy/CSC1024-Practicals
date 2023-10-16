@@ -7,9 +7,9 @@ def question_7():
     cumulative_distance = 0
 
     print(f'{"Time":<9} {"Interval Distance"} {"Total Distance":>20}')
-    while i < time + 1:
+    while i <= time:
         interval_distance = 0.5 * acceleration * (i ** 2)
         cumulative_distance += interval_distance
-        print(f'{i:<20} {interval_distance:>6} {cumulative_distance:>20}')
 
+        print(f'{i:<20} {interval_distance:>6} {cumulative_distance:>20}')
         i += 1
