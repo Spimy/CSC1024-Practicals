@@ -8,7 +8,7 @@ def question_3():
     i = 0
     ans = a
 
-    while i < b:
+    while i < b - 1:
         ans *= a
         i += 1
 
