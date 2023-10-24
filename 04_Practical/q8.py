@@ -7,16 +7,16 @@ def question_8():
     while square_size < 1 or square_size > 20:
         square_size = int(input_num('Enter size of square: '))
 
-    i = 0
-    while i < square_size:
-        j = 0
+    row = 0
+    while row < square_size:
+        column = 0
 
-        while j < square_size:
-            if 0 < i < square_size - 1 and 0 < j < square_size - 1:
+        while column < square_size:
+            if 0 < row < square_size - 1 and 0 < column < square_size - 1:
                 print(' ', end=' ')
             else:
                 print('*', end=' ')
-            j += 1
+            column += 1
 
-        i += 1
+        row += 1
         print()
