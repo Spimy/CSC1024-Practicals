@@ -5,10 +5,10 @@ def question_3():
     a = int(input_num('Enter first number (a): '))
     b = int(input_num('Enter second number (b): '))
 
-    i = 0
+    i = 1
     ans = a
 
-    while i < b - 1:
+    while i < b:
         ans *= a
         i += 1
 
