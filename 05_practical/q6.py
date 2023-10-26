@@ -20,14 +20,13 @@ def question_6():
         while i < len(msg):
             try:
                 if selection == 'decode':
-                    new_index = characters.index(msg[i]) - shift
-                    if new_index < 0:
-                        new_index = new_index + len(characters)
+                    new_index = (
+                        characters.index(msg[i]) - shift
+                    ) % len(characters)
                 else:
-                    new_index = characters.index(msg[i]) + shift
-                    if new_index >= len(characters):
-                        new_index = new_index - len(characters)
-
+                    new_index = (
+                        characters.index(msg[i]) + shift
+                    ) % len(characters)
                 result += characters[new_index]
             except ValueError:
                 result += msg[i]
