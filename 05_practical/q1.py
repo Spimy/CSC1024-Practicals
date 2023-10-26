@@ -26,7 +26,7 @@ def question_1():
             while cont.lower() not in ('y', 'n'):
                 cont = input('Do you want to play again? (y/n): ')
 
-            if cont == 'y':
+            if cont.lower() == 'y':
                 secret_num = randint(LOWER_LIMIT, UPPER_LIMIT)
                 guess = 0
                 num_attempts = 0
