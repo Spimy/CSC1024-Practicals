@@ -54,4 +54,7 @@ def range_input():
     while upper_range is None or math.floor(upper_range) != upper_range:
         upper_range = input_num('Enter maximum temperature: ')
 
+    if upper_range < lower_range:
+        return range_input()
+
     return (int(lower_range), int(upper_range))
