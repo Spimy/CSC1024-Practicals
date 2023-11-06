@@ -12,3 +12,5 @@ def question_1():
 
     my_list.sort()
     print(my_list)
+
+    return my_list
