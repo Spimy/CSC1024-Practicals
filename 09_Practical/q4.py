@@ -49,4 +49,4 @@ def question_4():
             )
             file.write(row_line + '\n')
 
-        file.write(('-' * len(header_line)))
+        file.write('-' * len(header_line))
