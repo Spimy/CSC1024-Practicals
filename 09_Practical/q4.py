@@ -8,7 +8,7 @@ class Student:
         self.t1 = float(t1)
         self.t2 = float(t2)
         self.t3 = float(t3)
-        self.average = round((self.t1 + self.t2 + self.t3) / 3, 2)
+        self.average = round((self.t1 + self.t2 + self.t3) / 3, 1)
 
     @staticmethod
     def from_string(str):
